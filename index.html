@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HABIBI.DEV | Full Stack Habibi</title>
+    <title>habibi.DEV | Full Stack</title>
+    <!-- Framework dan Ikon -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -15,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Animasi Kustom */
+        /* Animasi Terapung untuk Gambar Profil */
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-20px) rotateX(5deg); }
@@ -30,12 +32,14 @@
             perspective: 1000px;
         }
 
+        /* Efek Kaca (Glassmorphism) */
         .glass-effect {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Navigasi Antar Section */
         .section-fade {
             display: none;
             animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -50,13 +54,13 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Project Card Glow */
+        /* Cahaya pada Kartu Proyek saat Hover */
         .project-card:hover {
             box-shadow: 0 0 40px rgba(147, 51, 234, 0.2);
             transform: translateY(-10px);
         }
 
-        /* Hide scrollbar */
+        /* Desain Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -68,7 +72,7 @@
             border-radius: 10px;
         }
 
-        /* Image Zoom on Hover */
+        /* Animasi Zoom Gambar Proyek */
         .img-zoom {
             transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -79,7 +83,7 @@
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigasi Utama -->
     <nav class="fixed top-0 w-full z-50 glass-effect border-b border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 font-black text-2xl tracking-tighter cursor-pointer" onclick="showSection('home')">
@@ -92,24 +96,21 @@
             </div>
             
             <div class="hidden md:flex items-center bg-slate-900/50 border border-slate-800 rounded-full px-2 py-1">
-                <button onclick="showSection('home')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-white bg-purple-600" data-section="home">Home</button>
-                <button onclick="showSection('proyek')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-400 hover:text-white" data-section="proyek">Proyek</button>
+                <button onclick="showSection('home')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-white bg-purple-600" data-section="home">Utama</button>
+                <button onclick="showSection('proyek')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-400 hover:text-white" data-section="proyek">Projek</button>
                 <button onclick="showSection('galeri')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-400 hover:text-white" data-section="galeri">Galeri</button>
-                <button onclick="showSection('kontak')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-400 hover:text-white" data-section="kontak">Kontak</button>
+                <button onclick="showSection('kontak')" class="nav-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 text-slate-400 hover:text-white" data-section="kontak">Hubungi</button>
             </div>
             
             <div class="flex items-center gap-4">
-                <a href="#" class="hidden sm:block text-slate-400 hover:text-white transition-colors">
-                    <i data-lucide="github" class="w-6 h-6"></i>
-                </a>
                 <button class="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-purple-500 transition-all shadow-[0_0_20px_rgba(147,51,234,0.3)]">
-                    Hire Habibi
+                     Habibi
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Home Section -->
+    <!-- Halaman Utama (Home) -->
     <main id="home" class="section-fade section-active pt-44 pb-20 px-6 max-w-6xl mx-auto">
         <div class="grid lg:grid-cols-12 gap-16 items-center">
             <div class="lg:col-span-7 space-y-10">
@@ -118,21 +119,18 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
                     </span>
-                    Senior Full Stack Developer
+                    Full Stack Developer
                 </div>
                 <h1 class="text-6xl md:text-8xl font-black leading-[0.95] tracking-tighter">
                     Full Stack <br />
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 italic">Habibi</span>
                 </h1>
                 <p class="text-slate-400 text-xl max-w-xl leading-relaxed font-medium">
-                    Mahasiswa Sistem Informasi yang berfokus pada arsitektur sistem digital. Menguasai alur data dari frontend estetis hingga backend yang tangguh untuk solusi bisnis masa depan.
+                    Mahasiswa Sistem Maklumat yang memfokuskan kepada seni bina sistem digital. Menguasai aliran data dari frontend estetik hingga backend yang teguh.
                 </p>
                 <div class="flex flex-wrap gap-5 pt-4">
                     <button onclick="showSection('proyek')" class="px-10 py-4 bg-purple-600 hover:bg-purple-700 transition-all rounded-2xl font-bold text-lg flex items-center gap-3 group shadow-xl shadow-purple-900/30">
                         Lihat Karya <i data-lucide="external-link" class="w-5 h-5"></i>
-                    </button>
-                    <button class="px-10 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 transition-all rounded-2xl font-bold text-lg backdrop-blur-sm">
-                        Tentang Saya
                     </button>
                 </div>
             </div>
@@ -158,23 +156,18 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="absolute -right-8 top-20 bg-white text-black p-4 rounded-2xl shadow-2xl animate-bounce">
-                    <p class="text-[10px] font-black uppercase tracking-widest">Active Projects</p>
-                    <p class="text-2xl font-black">12+</p>
-                </div>
             </div>
         </div>
     </main>
 
-    <!-- Project Section -->
+    <!-- Halaman Projek (10 Projek dengan Animasi) -->
     <section id="proyek" class="section-fade pt-36 pb-20 px-6 max-w-6xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 border-b border-slate-800 pb-12">
             <div class="space-y-4">
                 <h2 class="text-5xl font-black tracking-tight flex items-center gap-4">
                     <i data-lucide="layout" class="text-purple-500 w-10 h-10"></i> Portofolio
                 </h2>
-                <p class="text-slate-400 max-w-md text-lg italic">"10 Karya Unggulan Habibi yang Siap Mengguncang Dunia Digital."</p>
+                <p class="text-slate-400 max-w-md text-lg italic">"10 Karya Unggulan Habibi"</p>
             </div>
             <div class="relative group w-full md:w-96">
                 <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-purple-500 transition-colors"></i>
@@ -183,203 +176,142 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12" id="projectGrid">
-            <!-- 1. Neon Genesis -->
+            <!-- Projek 1 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800" class="img-zoom w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 1">
                 </div>
                 <div class="p-10 relative">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-purple-600/20 text-purple-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Web Design</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Neon Genesis UI</h3>
                     <p class="text-slate-400 mb-8 leading-relaxed">Antarmuka futuristik dengan visual cyber-neon yang sangat responsif.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="zap" class="text-yellow-500 w-4 h-4"></i> High Performance
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="zap" class="text-yellow-500 w-4 h-4"></i> Prestasi Tinggi</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 2. Spirit Away -->
+            <!-- Projek 2 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800" class="img-zoom w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"></div>
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 2">
                 </div>
                 <div class="p-10 relative">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-600/20 text-blue-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Backend</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Spirit Away Cloud</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Arsitektur serverless yang menangani jutaan data dengan latensi nol.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Arsitektur serverless yang menangani data besar dengan kependaman sifar.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="database" class="text-blue-500 w-4 h-4"></i> Scalable Data
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="database" class="text-blue-500 w-4 h-4"></i> Data Boleh Skala</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 3. Cyberpunk Dashboard -->
+            <!-- Projek 3 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 3">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-pink-600/20 text-pink-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Dashboard</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Night City Hub</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Panel admin dengan visual gelap dan animasi statistik real-time.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Panel admin dengan visual gelap dan animasi statistik masa nyata.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="pie-chart" class="text-pink-500 w-4 h-4"></i> Data Visual
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="pie-chart" class="text-pink-500 w-4 h-4"></i> Visual Data</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 4. Anime Streaming Platform -->
+            <!-- Projek 4 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 4">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-orange-600/20 text-orange-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Web App</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">MangaVerse Player</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Platform streaming video dengan sistem buffer cerdas.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Platform penstriman video dengan sistem penimbal pintar.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="play" class="text-orange-500 w-4 h-4"></i> Ultra HD
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="play" class="text-orange-500 w-4 h-4"></i> Ultra HD</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 5. E-Commerce Ninja -->
+            <!-- Projek 5 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 5">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-green-600/20 text-green-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">E-Commerce</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Shinobi Shop</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Toko online dengan sistem pembayaran otomatis yang aman.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Kedai atas talian dengan sistem pembayaran automatik yang selamat.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="shopping-cart" class="text-green-500 w-4 h-4"></i> Fast Checkout
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="shopping-cart" class="text-green-500 w-4 h-4"></i> Checkout Pantas</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 6. Crypto Samurai -->
+            <!-- Projek 6 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 6">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-indigo-600/20 text-indigo-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Blockchain</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Katana Crypto</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Dashboard pelacakan aset kripto dengan integrasi Web3.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Papan pemuka pengesanan aset kripto dengan integrasi Web3.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="link" class="text-indigo-500 w-4 h-4"></i> Web3 Ready
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="link" class="text-indigo-500 w-4 h-4"></i> Web3 Ready</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 7. Smart AI Chat -->
+            <!-- Projek 7 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 7">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-cyan-600/20 text-cyan-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">AI Solution</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Mecha Mind AI</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Asisten virtual cerdas yang memahami konteks bahasa manusia.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Pembantu maya pintar yang memahami konteks bahasa manusia.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="message-square" class="text-cyan-500 w-4 h-4"></i> NLP Tech
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="message-square" class="text-cyan-500 w-4 h-4"></i> Teknologi NLP</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 8. Fitness Tracking App -->
+            <!-- Projek 8 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 8">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-red-600/20 text-red-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Mobile App</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Sayan Gym Tracker</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Aplikasi kebugaran dengan grafik kemajuan latihan harian.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Aplikasi kecergasan dengan grafik kemajuan latihan harian.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="activity" class="text-red-500 w-4 h-4"></i> Health Track
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="activity" class="text-red-500 w-4 h-4"></i> Trek Kesihatan</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 9. Modern Photography Portfolio -->
+            <!-- Projek 9 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 9">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-amber-600/20 text-amber-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Design</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Zen Lens Studio</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Galeri foto minimalis dengan transisi halaman yang super halus.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Galeri foto minimalis dengan peralihan halaman yang lancar.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="camera" class="text-amber-500 w-4 h-4"></i> Minimalist
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="camera" class="text-amber-500 w-4 h-4"></i> Minimalis</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
             </div>
-
-            <!-- 10. Travel & Adventure App -->
+            <!-- Projek 10 -->
             <div class="project-card group relative bg-slate-900/20 rounded-[2.5rem] border border-slate-800/50 overflow-hidden transition-all duration-500">
                 <div class="aspect-[16/10] overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800" class="img-zoom w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800" class="img-zoom w-full h-full object-cover" alt="Projek 10">
                 </div>
                 <div class="p-10">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-teal-600/20 text-teal-400 rounded-lg text-[10px] font-bold uppercase tracking-widest">Travel</span>
-                    </div>
                     <h3 class="text-3xl font-bold mb-4">Isekai Journey</h3>
-                    <p class="text-slate-400 mb-8 leading-relaxed">Pemandu wisata digital untuk destinasi eksotis di seluruh dunia.</p>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Panduan pelancongan digital untuk destinasi eksotik di seluruh dunia.</p>
                     <div class="flex items-center justify-between pt-6 border-t border-slate-800/50">
-                        <span class="text-xs font-black text-slate-500 flex items-center gap-2">
-                            <i data-lucide="map" class="text-teal-500 w-4 h-4"></i> Explore More
-                        </span>
+                        <span class="text-xs font-black text-slate-500 flex items-center gap-2"><i data-lucide="map" class="text-teal-500 w-4 h-4"></i> Terokai Lebih</span>
                         <i data-lucide="arrow-right" class="text-purple-500 group-hover:translate-x-2 transition-transform"></i>
                     </div>
                 </div>
@@ -387,24 +319,24 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Halaman Galeri & AI -->
     <section id="galeri" class="section-fade pt-36 pb-20 px-6 max-w-6xl mx-auto">
         <div class="mb-16">
-            <h2 class="text-5xl font-black tracking-tight mb-4">Visual Hub</h2>
-            <p class="text-slate-400 text-lg">Tempat di mana imajinasi Habibi bertemu dengan kecerdasan buatan.</p>
+            <h2 class="text-5xl font-black tracking-tight mb-4">Hab Visual</h2>
+            <p class="text-slate-400 text-lg">Tempat di mana imaginasi Habibi bertemu dengan kecerdasan buatan.</p>
         </div>
 
+        <!-- Fitur Simulasi AI -->
         <div class="mb-20 relative p-12 rounded-[3.5rem] bg-slate-900 border border-slate-800 shadow-inner overflow-hidden">
-            <div class="absolute top-0 right-0 p-10 opacity-5 pointer-events-none"><i data-lucide="cpu" class="w-64 h-64"></i></div>
             <div class="relative z-10 max-w-2xl">
                 <div class="flex items-center gap-3 text-purple-400 font-black mb-6 tracking-widest uppercase text-sm">
                     <i data-lucide="sparkles" class="w-5 h-5"></i> Habibi AI Assistant
                 </div>
-                <h3 class="text-3xl font-bold mb-8">Visualisasikan ide karaktermu bersama AI kami.</h3>
+                <h3 class="text-3xl font-bold mb-8">Visualisasikan idea karakter anda bersama AI kami.</h3>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <input type="text" id="aiPrompt" placeholder="Deskripsikan karakter..." class="flex-1 bg-slate-950 border-2 border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all text-lg shadow-2xl">
+                    <input type="text" id="aiPrompt" placeholder="Huraikan karakter..." class="flex-1 bg-slate-950 border-2 border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all text-lg shadow-2xl">
                     <button onclick="mockGenerate()" class="px-10 bg-purple-600 hover:bg-purple-700 rounded-2xl font-black transition-all flex items-center justify-center gap-3 shadow-xl shadow-purple-900/40 text-lg">
-                        <i data-lucide="image" class="w-6 h-6"></i> Generate
+                        <i data-lucide="image" class="w-6 h-6"></i> Jana
                     </button>
                 </div>
             </div>
@@ -412,64 +344,48 @@
 
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-10 space-y-10">
             <div class="break-inside-avoid group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Galeri 1">
             </div>
             <div class="break-inside-avoid group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Galeri 2">
             </div>
             <div class="break-inside-avoid group relative rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800">
-                <img src="https://images.unsplash.com/photo-1560972550-aba3456b5564?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
+                <img src="https://images.unsplash.com/photo-1560972550-aba3456b5564?q=80&w=600" class="w-full opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" alt="Galeri 3">
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Halaman Hubungi -->
     <section id="kontak" class="section-fade pt-36 pb-20 px-6 max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-20">
             <div class="space-y-10">
                 <h2 class="text-6xl font-black leading-tight tracking-tighter">Hubungi<br/><span class="text-purple-500">Habibi Sekarang.</span></h2>
-                <p class="text-slate-400 text-xl leading-relaxed text-center md:text-left">Habibi siap mendengarkan ide-ide revolusioner Anda. Mari kita ubah kode menjadi emas bersama-sama.</p>
-                
-                <div class="space-y-6 pt-6">
-                    <div class="flex items-center gap-6 group cursor-pointer">
-                        <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 text-purple-400 group-hover:bg-purple-600 group-hover:text-white transition-all">
-                            <i data-lucide="send" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">Direct Email</p>
-                            <p class="font-bold text-lg">habibi@developer.studio</p>
-                        </div>
-                    </div>
+                <p class="text-slate-400 text-xl leading-relaxed">Habibi sedia mendengar idea revolusioner anda. Mari kita ubah kod menjadi emas bersama-sama.</p>
+                <div class="p-5 bg-slate-900 rounded-2xl border border-slate-800 inline-block">
+                    <p class="text-xs font-black text-slate-500 uppercase tracking-widest mb-1">Direct Email</p>
+                    <p class="font-bold text-lg text-purple-400">habibi@developer.studio</p>
                 </div>
             </div>
 
             <div class="bg-slate-900/40 p-12 rounded-[3.5rem] border border-slate-800 shadow-2xl space-y-6">
-                <input type="text" placeholder="Nama Kamu" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all">
-                <input type="email" placeholder="Email Kamu" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all">
-                <textarea rows="4" placeholder="Pesan untuk Habibi..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all resize-none"></textarea>
-                <button class="w-full bg-white text-black py-6 rounded-2xl font-black text-xl hover:bg-purple-600 hover:text-white transition-all flex items-center justify-center gap-4 group">
-                    Kirim Pesan <i data-lucide="send" class="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
-                </button>
+                <input type="text" placeholder="Nama Anda" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all">
+                <input type="email" placeholder="E-mel Anda" class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all">
+                <textarea rows="4" placeholder="Pesanan untuk Habibi..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl px-6 py-5 outline-none focus:border-purple-500 transition-all resize-none"></textarea>
+                <button class="w-full bg-white text-black py-6 rounded-2xl font-black text-xl hover:bg-purple-600 hover:text-white transition-all">Kirim Pesanan</button>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Kaki Laman -->
     <footer class="py-24 border-t border-slate-900 text-center">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-10">
-            <div class="flex items-center gap-4 font-black text-3xl">
-                <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center rotate-6"><i data-lucide="sparkles" class="text-white"></i></div>
-                <span>HABIBI.DEV</span>
-            </div>
-            <p class="text-slate-600 text-sm max-w-sm">Dibuat dengan dedikasi penuh oleh Habibi. © 2025 All Rights Reserved.</p>
-        </div>
+        <p class="text-slate-600 text-sm">Dibuat dengan dedikasi penuh oleh Habibi. © 2025 Hak Cipta Terpelihara.</p>
     </footer>
 
     <script>
-        // Inisialisasi Lucide Icons
+        // Memulakan Ikon Lucide
         lucide.createIcons();
 
-        // Navigasi Section Sederhana
+        // Fungsi Navigasi Seksyen
         function showSection(sectionId) {
             document.querySelectorAll('.section-fade').forEach(section => {
                 section.classList.remove('section-active');
@@ -490,7 +406,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Fitur Filter Sederhana
+        // Fungsi Carian Projek
         function filterProjects(query) {
             const cards = document.querySelectorAll('.project-card');
             cards.forEach(card => {
@@ -504,17 +420,17 @@
             });
         }
 
-        // Mock AI Generate (hanya untuk simulasi UI)
+        // Fungsi Simulasi AI
         function mockGenerate() {
             const prompt = document.getElementById('aiPrompt').value;
             if (!prompt) return;
             
             const btn = event.currentTarget;
-            btn.innerHTML = '<i data-lucide="loader-2" class="animate-spin w-6 h-6"></i> Generating...';
+            btn.innerHTML = '<i data-lucide="loader-2" class="animate-spin w-6 h-6"></i> Menjana...';
             lucide.createIcons();
 
             setTimeout(() => {
-                btn.innerHTML = '<i data-lucide="image" class="w-6 h-6"></i> Generate';
+                btn.innerHTML = '<i data-lucide="image" class="w-6 h-6"></i> Jana';
                 lucide.createIcons();
                 alert("Simulasi AI: Habibi sedang memproses gambar untuk: " + prompt);
             }, 2000);
